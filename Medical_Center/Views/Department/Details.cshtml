@@ -1,0 +1,30 @@
+﻿@model Medical_Center.Models.Department
+
+@{
+    ViewData["Title"] = "Department Details";
+}
+
+<h2>Department Details</h2>
+
+<div>
+    <h4>@Model.DepartmentName</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            Location
+        </dt>
+        <dd class="col-sm-10">
+            @Model.Location
+        </dd>
+        <dt class="col-sm-2">
+            Phone Number
+        </dt>
+        <dd class="col-sm-10">
+            @Model.PhoneNumber
+        </dd>
+    </dl>
+</div>
+<div>
+    <a href="@Url.Action("Edit", new { id = Model.DepartmentId })" class="btn btn-warning">Edit</a> |
+    <a href="@Url.Action("Index")" class="btn btn-secondary">Back to List</a>
+</div>

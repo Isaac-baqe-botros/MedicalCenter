@@ -1,0 +1,44 @@
+﻿@{
+    ViewData["Title"] = "Admin Dashboard";
+}
+
+<h2>Admin Dashboard</h2>
+<a href="@Url.Action("Index", "Department")">Manage Departments</a>
+<a href="@Url.Action("Index", "Doctor")">Manage Doctors</a>
+<a href="@Url.Action("Index", "Staff")">Manage Staff</a>
+
+
+<div class="row">
+    <div class="col-md-3">
+        <div class="card">
+            <div class="card-header">Total Patients</div>
+            <div class="card-body">
+                <h5 class="card-title">@Model.TotalPatients</h5>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card">
+            <div class="card-header">Total Appointments</div>
+            <div class="card-body">
+                <h5 class="card-title">@Model.TotalAppointments</h5>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card">
+            <div class="card-header">Total Doctors</div>
+            <div class="card-body">
+                <h5 class="card-title">@Model.TotalDoctors</h5>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card">
+            <div class="card-header">Total Billing</div>
+            <div class="card-body">
+                <h5 class="card-title">@Model.TotalBilling</h5>
+            </div>
+        </div>
+    </div>
+</div>

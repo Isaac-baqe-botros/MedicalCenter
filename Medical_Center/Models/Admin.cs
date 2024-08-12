@@ -1,18 +1,10 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.AspNetCore.Identity;
+using System.ComponentModel.DataAnnotations;
 
 namespace Medical_Center.Models
 {
 
-    public class Admin
+    public class Admin : IdentityUser
     {
-        public int Id { get; set; }
-
-        [Required]
-        [StringLength(100)]
-        public string Username { get; set; }
-
-        [Required]
-        [StringLength(100)]
-        public string PasswordHash { get; set; } // Store hashed password for security
     }
-}
+ }

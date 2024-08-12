@@ -1,10 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace Medical_Center.Models;
 
 public partial class MedicalRecord
 {
+    [Required]
+    [Key]
     public int RecordId { get; set; }
 
     public int? PatientId { get; set; }
